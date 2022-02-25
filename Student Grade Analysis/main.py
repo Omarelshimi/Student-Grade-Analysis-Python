@@ -44,6 +44,6 @@ def main():
                     honours += 1
             print ("Total amount of honour students: " + str(honours))
         if selection == "5":
-            quit()
             print ("Program Closed.")
+            quit()  
 main() 
