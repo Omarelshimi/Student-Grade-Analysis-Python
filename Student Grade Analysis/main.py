@@ -1,15 +1,10 @@
 #Import random function
-import math
 import random
-from re import I
-
-
 
 #main function
 def main():
     gradeArray = []
     selection = 0
-    max = gradeArray[i]
 
     for i in range(0, 50):
         grade = random.randint(0,101)
@@ -31,13 +26,21 @@ def main():
         if selection == "2":
             gradeArray.clear()
             for i in range(0, 50):
-                grade = random.randint(0,101)
+                grade = random.randint(0,99)
                 gradeArray.append(grade)
             for grade in gradeArray:
                 print (grade)
         if selection == "3":
-            for i in range(0, len(gradeArray)):
-                if (gradeArray[i] > max):
-                    max = gradeArray[i]
-            print ("The highest grade was" + max) 
-main()
+           max_grade = max(gradeArray)
+           min_grade = min(gradeArray)
+           ave_grade = sum(gradeArray) / len(gradeArray)
+           print ("The highest grade was " + str(max_grade) + "%")
+           print ("The lowest grade was " + str(min_grade) + "%")
+           print ("The average grade was " + str(ave_grade) + "%")
+        if selection == "4":
+            honours = 0
+            for i in range(0, 50):
+                if i >= 80:
+                    honours += 1
+            print ("Total amount of honour students: " + str(honours))
+main() 
