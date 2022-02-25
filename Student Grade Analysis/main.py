@@ -7,7 +7,7 @@ def main():
     selection = 0
 
     for i in range(0, 50):
-        grade = random.randint(0,101)
+        grade = random.randint(0,100)
         gradeArray.append(grade)
 
     while selection != 5:
@@ -40,7 +40,10 @@ def main():
         if selection == "4":
             honours = 0
             for i in range(0, 50):
-                if i >= 80:
+                if gradeArray[i] >= 80:
                     honours += 1
             print ("Total amount of honour students: " + str(honours))
+        if selection == "5":
+            quit()
+            print ("Program Closed.")
 main() 
